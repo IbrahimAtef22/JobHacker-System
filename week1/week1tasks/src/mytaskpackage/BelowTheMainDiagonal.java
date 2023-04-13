@@ -1,16 +1,13 @@
-package week1;
+package week1.week1tasks.src.mytaskpackage;
 
 import java.util.Scanner;
 
-public class ColumnInArray {
+public class BelowTheMainDiagonal {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // take column number to make operation on it
-        int C = input.nextInt();
-        input.nextLine();
         // take character 'S' which means sum or 'M' which means average
-        String T = input.nextLine().toUpperCase();
+        String O = input.nextLine().toUpperCase();
 
         // 2D array with 12 rows and 12 columns
         double[][] M = new double[12][12];
@@ -24,22 +21,29 @@ public class ColumnInArray {
 
         double sum = 0;
         double average;
+        int count = 0;
 
-        // count sum of numbers in array column
-        if (T.charAt(0) == 'S'){
-            for (int j = 0; j < 12; j++){
-                sum += M[j][C];
+        // count sum of numbers below the main diagonal
+        if (O.charAt(0) == 'S'){
+            for (int i = 1; i < 12; i++){
+                for (int j = 0; j < i; j++){
+                    sum += M[i][j];
+                }
             }
             System.out.printf("%.1f",sum);
             System.out.println();
 
-        } else if (T.charAt(0) == 'M') {        // count average of numbers in array column
-            for (int j = 0; j < 12; j++){
-                sum += M[j][C];
+        } else if (O.charAt(0) == 'M') {            // count average of numbers below the main diagonal
+            for (int i = 1; i < 12; i++){
+                for (int j = 0; j < i; j++){
+                    sum += M[i][j];
+                    count++;
+                }
             }
-            average = sum / 12;
+            average = sum / count;
             System.out.printf("%.1f",average);
             System.out.println();
         }
+
     }
 }

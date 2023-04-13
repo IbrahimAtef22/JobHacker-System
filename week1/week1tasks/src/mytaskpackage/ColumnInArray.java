@@ -1,13 +1,13 @@
-package week1;
+package week1.week1tasks.src.mytaskpackage;
 
 import java.util.Scanner;
 
-public class LineInArray {
+public class ColumnInArray {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // take line number to make operation on it
-        int L = input.nextInt();
+        // take column number to make operation on it
+        int C = input.nextInt();
         input.nextLine();
         // take character 'S' which means sum or 'M' which means average
         String T = input.nextLine().toUpperCase();
@@ -25,22 +25,21 @@ public class LineInArray {
         double sum = 0;
         double average;
 
-        // count sum of numbers in array line
+        // count sum of numbers in array column
         if (T.charAt(0) == 'S'){
             for (int j = 0; j < 12; j++){
-                sum += M[L][j];
+                sum += M[j][C];
             }
             System.out.printf("%.1f",sum);
             System.out.println();
 
-        } else if (T.charAt(0) == 'M') {        // count average of numbers in array line
+        } else if (T.charAt(0) == 'M') {        // count average of numbers in array column
             for (int j = 0; j < 12; j++){
-                sum += M[L][j];
+                sum += M[j][C];
             }
             average = sum / 12;
             System.out.printf("%.1f",average);
             System.out.println();
         }
-
     }
 }
