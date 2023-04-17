@@ -5,23 +5,23 @@ import java.util.Scanner;
 public class ArrayFillII {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
-        int T = input.nextInt();
-
-        int[] N = new int[1000];
+        // input number that you fill array from 0 to that number
+        int numToFillArray = input.nextInt();
+        // array to fill with 0 to number input
+        int[] arrayToFill = new int[1000];
 
         int j = 0;
         int i = 0;
 
         // label for outer loop
         aa:
-        while (i < N.length){
-            while (j < T){
-                N[i] = j;
+        while (i < arrayToFill.length){
+            while (j < numToFillArray){
+                arrayToFill[i] = j;
                 System.out.println("N["+i+"] = "+j);
                 j++;
                 i++;
-                if(i >= N.length){
+                if(i >= arrayToFill.length){
                     break aa;
                 }
             }
