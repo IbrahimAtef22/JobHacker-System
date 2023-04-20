@@ -1,0 +1,74 @@
+1- Test adding a book:
+
+  Scenario 1: Adding a book with all required fields with correct data.
+     Input:  Book{ID = 0123, title = 'JobHacker-System',  author = ’JOBHacker’,  version = '1', isAvailable = true}
+     output: The JobHacker-System book is successfully added to the library.
+  Scenario 2: Adding a book with invalid data
+     Input: Book{ID = -555, title = 'JobHacker-System',  author = ’JOBHacker’,  version = '1', isAvailable = true}
+     output: “Invalid Id, Please Enter valid data”
+
+     Input: Book{ID = abc, title = 'JobHacker-System',  author = ’JOBHacker’,  version = '1', isAvailable = true}
+     output: “Invalid Id, Please Enter valid data”
+
+2- Test Removing a book:
+
+    Scenario 1: Input a valid book id that exist in the list of books in the library
+        Input: bookID = 123
+        output: the book has been removed from the library
+
+    Scenario 2: Input un valid book id that not exist in the list of books in the library
+        Input: bookID = 73
+        output: this book is not in the library.
+
+3-  Test Check out a book:
+
+      Scenario 1: Input a valid book id and book is available in the the library
+            Input: bookID = 123, isAvailable = true
+            output: user has checked out the book
+
+      Scenario 2: Input un valid book id or book is un available in the library
+            Input: bookID = -44, isAvailable = true
+            output: Invalid book Id, Please Enter valid data
+
+            Input: bookID = 123, isAvailable = false
+            output: book is not available now
+
+4- Test Return a book:
+
+      Scenario 1: a valid input.
+            Input: user id = 4, book id = 123
+            output: user has returned the book
+
+      Scenario 2: in valid input.
+            Input: book id = -55, user id = 4
+            output: Invalid Book ID or Book is not borrowed by the user.
+
+            Input: book id = 123, user id = 50
+            output: Invalid Book ID or Book is not borrowed by the user.
+
+5- Test Display book details:
+
+        Scenario 1: Display details of a book that exists in the library and is available
+              Input: book id = 123, isAvailable = true.
+              output: Display details of a book
+
+        Scenario 2: Display details of a book that exists in the library and is borrowed by a user
+               Input: book id = 123, isAvailable = false.
+               output: Display details of a book
+
+        Scenario 3: book doesn't exist in the library
+            Input: book id = 66, isAvailable = false.
+            output: This book doesn't exist in the library
+
+6- Test Display Available books:
+
+        Scenario 1: Display available books when there are available books in the library
+
+        Scenario 2: Display No books are currently available when there aren't available books in the library
+
+7- Test Display Borrowed books:
+
+        Scenario 1: Display borrowed books when there are borrowed books in the library
+
+        Scenario 2: Display No books have been borrowed when there are no borrowed books in the library
+
