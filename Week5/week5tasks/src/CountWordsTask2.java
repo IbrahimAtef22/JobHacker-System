@@ -17,7 +17,7 @@ public class CountWordsTask2 {
                     count++;
                 }
             }
-            count++;
+
 
             fw = new FileWriter("Week5\\week5tasks\\src\\Lincoln.txt", true);
 

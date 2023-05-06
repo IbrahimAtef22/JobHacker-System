@@ -8,12 +8,12 @@ import java.util.Scanner;
 public class CalcSumAndAvgFromFile {
     public static void main(String[] args) {
         String url = "http://liveexample.pearsoncmg.com/data/Scores.txt";
-        String fileName = "Week5\\week5tasks\\src\\Scores.txt";
-        File file = new File(fileName);
-        int sumOfValues = getSum(file);
-        int averageOfValues = getAverage(file);
 
         try (FileWriter fileWriter = readFromWebToFile(url)) {
+            String fileName = "Week5\\week5tasks\\src\\Scores.txt";
+            File file = new File(fileName);
+            int sumOfValues = getSum(file);
+            int averageOfValues = getAverage(file);
             if (fileWriter != null) {
                 fileWriter.write("\nSum Of Values in the File = " + sumOfValues);
                 fileWriter.write("\nAverage Of Values in the File = " + averageOfValues + "\n");
@@ -102,7 +102,7 @@ public class CalcSumAndAvgFromFile {
                 }
             }
         }
-        count++;
+
 
         average = sum / count;
         return average;
