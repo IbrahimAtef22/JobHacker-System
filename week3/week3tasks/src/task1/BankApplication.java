@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class BankApplication {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        Bank bankAccount = new Bank();
+        Account newAccount = null;
         while (true){
             System.out.println("*** Welcome To My Bank System App ***");
             System.out.println("Please choose your operation from the list!");
@@ -25,9 +27,12 @@ public class BankApplication {
                     String accHolderName = input.nextLine();
                     System.out.println("Enter account balance:");
                     double balance = input.nextDouble();
-                    Account newAccount = new Account(accNum,accHolderName,balance);
 
-                    Bank bankAccount = new Bank();
+                    newAccount = new Account();
+                    newAccount.setAccountNumber(accNum);
+                    newAccount.setAccountHolderName(accHolderName);
+                    newAccount.setBalance(balance);
+                    
                     bankAccount.addNewAccount(newAccount);
                     break;
                 case 2:
@@ -35,11 +40,12 @@ public class BankApplication {
                     accNum = input.nextLine();
                     System.out.println("Enter your amount:");
                     double amount = input.nextDouble();
-                    Bank bankAccount1 = new Bank();
-                    boolean isValidAccount = bankAccount1.depositing(accNum);
-                    if (isValidAccount == true){
-                        Account account = new Account();
-                        account.deposit(amount);
+
+                    boolean isValidAccount = bankAccount.isExistAccount(accNum);
+                    if (isValidAccount){
+                        if (newAccount != null) {
+                            newAccount.deposit(amount);
+                        }
                     }else{
                         System.out.println("This account is not exist, please enter a valid account.");
                     }
@@ -50,22 +56,27 @@ public class BankApplication {
                     accNum = input.nextLine();
                     System.out.println("Enter your amount:");
                     amount = input.nextDouble();
-                    Bank bankAccount2 = new Bank();
-                    isValidAccount = bankAccount2.depositing(accNum);
-                    if (isValidAccount == true){
-                        Account account = new Account();
-                        account.withdraw(amount);
+
+                    isValidAccount = bankAccount.isExistAccount(accNum);
+                    if (isValidAccount){
+                        if (newAccount != null) {
+                            newAccount.withdraw(amount);
+                        }
                     }else{
                         System.out.println("This account is not exist, please enter a valid account.");
                     }
                     break;
                 case 4:
-                    Bank bankAccount3 = new Bank();
                     SavingsAccount saveAccount = new SavingsAccount();
-                    Account account = new Account();
-                    double primBalance = account.getBalance();
+
+                    double primBalance = 0;
+                    if (newAccount != null) {
+                        primBalance = newAccount.getBalance();
+                    }
+                    System.out.println("primBalance = "+primBalance);
                     double interest = saveAccount.calculateInterest(primBalance);
-                    bankAccount3.displayBalance(primBalance, interest);
+                    System.out.println("interest = "+interest);
+                    bankAccount.displayBalance(primBalance, interest);
 
                     break;
                 case 5:

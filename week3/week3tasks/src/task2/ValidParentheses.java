@@ -1,6 +1,7 @@
 package week3.week3tasks.src.task2;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class ValidParentheses {
     public static void main(String[] args) {
@@ -11,15 +12,27 @@ public class ValidParentheses {
         System.out.println(result);
     }
     public static boolean isValid(String s) {
-        if (s.length() % 2 == 1 || s.isEmpty()) {
-            return false;
+
+        Stack<Character> stack = new Stack<>();
+        for (char c : s.toCharArray()){
+            if(c == '(' || c == '{' || c == '['){
+                stack.push(c);
+            }else{
+                if(stack.isEmpty()){
+                    return false;
+                }
+                if(c == ')' && stack.peek() == '('){
+                    stack.pop();
+                }else if(c == '}' && stack.peek() == '{'){
+                    stack.pop();
+                }else if(c == ']' && stack.peek() == '['){
+                    stack.pop();
+                }else{
+                    return false;
+                }
+            }
         }
-        while (s.contains("()") || s.contains("[]") || s.contains("{}")) {
-            s = s.replace("()", "");
-            s = s.replace("[]", "");
-            s = s.replace("{}", "");
-        }
-        return s.isEmpty();
+        return stack.isEmpty();
 
     }
 

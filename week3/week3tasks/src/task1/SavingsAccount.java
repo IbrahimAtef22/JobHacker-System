@@ -6,7 +6,6 @@ public class SavingsAccount extends Account{
 
     // calculateInterest method
     public double calculateInterest(double balance){
-        double interest = balance * interestRate;
-        return interest;
+        return balance * interestRate;
     }
 }

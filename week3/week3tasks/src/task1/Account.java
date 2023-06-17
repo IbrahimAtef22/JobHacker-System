@@ -9,11 +9,6 @@ public class Account {
 
     }
 
-    public Account(String accountNumber, String accountHolderName, double balance) {
-        this.accountNumber = accountNumber;
-        this.accountHolderName = accountHolderName;
-        this.balance = balance;
-    }
 
     public String getAccountNumber() {
         return accountNumber;
@@ -41,7 +36,7 @@ public class Account {
 
     // depositing method
     public void deposit(double amount){
-        balance += amount;
+        this.balance += amount;
         System.out.println(amount+" is deposited into Your Account");
         System.out.println("Your New Balance is "+balance);
     }

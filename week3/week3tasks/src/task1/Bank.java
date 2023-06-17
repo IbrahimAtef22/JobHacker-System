@@ -1,41 +1,29 @@
 package week3.week3tasks.src.task1;
 
+import java.util.ArrayList;
+
 public class Bank {
-    private Account[] accounts = new Account[50];
-    static int i = 0;
+    private ArrayList<Account> accounts = new ArrayList<>();
 
     // addNewAccount method
     public void addNewAccount(Account account){
-        if (i < accounts.length){
-            accounts[i] = account;
-            i++;
+        if (account != null){
+            accounts.add(account);
         }
     }
 
-    // depositing method
-    public boolean depositing(String accNum){
-        boolean validAccount = true;
-        for(int i = 0; i < accounts.length; i++){
-            if (accounts[i].getAccountNumber() == accNum){
+    // isExistAccount method
+    public boolean isExistAccount(String accNum){
+        boolean validAccount = false;
+        for (Account account : accounts) {
+            if (account.getAccountNumber().equals(accNum)) {
                 validAccount = true;
-            }else{
-                validAccount = false;
+                break;
             }
         }
         return validAccount;
     }
-    // withdrawing method
-    public boolean withdrawing(String accNum){
-        boolean validAccount = true;
-        for(int i = 0; i < accounts.length; i++){
-            if (accounts[i].getAccountNumber() == accNum){
-                validAccount = true;
-            }else{
-                validAccount = false;
-            }
-        }
-        return validAccount;
-    }
+
     // displayBalance
     public void displayBalance(double primBalance, double interest){
         double totalBalance = primBalance + interest;
