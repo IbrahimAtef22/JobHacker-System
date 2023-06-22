@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="67f9cf42-af42-442a-816a-f2ac1bdc7b1d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/JobHacker-System.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/AreaOfCircle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/ArrayFillII.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/ArraychangeI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/Average2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/Banknotes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/BelowTheMainDiagonal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/ColumnInArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/DistanceBetweenTwoPoints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/EvenOddPositiveAndNegative.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/ExtremelyBasic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/HighestAndPosition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/LineInArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/Multiples.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week1/week1tasks/src/mytaskpackage/SquaredAndCubic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/src/task1/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/src/task1/Bank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/src/task1/BankApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/src/task1/SavingsAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/src/task2/TwoSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/src/task2/ValidParentheses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JobHacker-System/week3/week3tasks/week3tasks.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/AreaOfCircle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/ArrayFillII.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/ArraychangeI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/Average2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/Banknotes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/BelowTheMainDiagonal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/ColumnInArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/DistanceBetweenTwoPoints.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/EvenOddPositiveAndNegative.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/ExtremelyBasic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/HighestAndPosition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/LineInArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/Multiples.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1tasks/src/mytaskpackage/SquaredAndCubic.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2RFkJQRIWFKHE7VgSUtv8AxedPa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Programming/JavaBackendTraining_JobHacker/JobHacker-System/Week11",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.language"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="JobHacker-System" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="JobHacker-System" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67f9cf42-af42-442a-816a-f2ac1bdc7b1d" name="Changes" comment="" />
+      <created>1686853144555</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686853144555</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
