@@ -75,11 +75,15 @@ public class JdbcTask2 {
                         "SET Vacation_Balance = 45\n" +
                         "WHERE Age > 45;";
             String sql4 = "UPDATE Employee\n" +
-                        "SET F_Name = 'Mr/Mrs'+F_Name\n" +
-                        "WHERE Age > 45;";
+                        "SET F_Name = CONCAT('Mr.',F_Name)\n" +
+                        "WHERE Age > 45 AND Sex = 'male';";
+            String sql5 = "UPDATE Employee\n" +
+                        "SET F_Name = CONCAT('Mrs.',F_Name)\n" +
+                        "WHERE Age > 45 AND Sex = 'female';";
             Statement st = con.createStatement();
             st.addBatch(sql3);
             st.addBatch(sql4);
+            st.addBatch(sql5);
 
             st.executeBatch();
 
