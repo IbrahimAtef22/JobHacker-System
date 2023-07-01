@@ -3,11 +3,11 @@ package Week4.LibraryManagementSystem.src;
 public class Book {
     public String title;
     public String author;
-    public int bookID;
+    public String bookID;
     public int version;
     public boolean isAvailable;
 
-    public Book(String title, String author, int bookID, int version) {
+    public Book(String title, String author, String bookID, int version) {
         this.title = title;
         this.author = author;
         this.bookID = bookID;

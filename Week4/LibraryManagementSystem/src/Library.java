@@ -31,9 +31,9 @@ public class Library {
     }
 
     // method to check out a book in the library
-    public User checkoutBook(User user, int book_id) {
+    public User checkoutBook(User user, String book_id) {
         for (Book book : books) {
-            if (book.bookID == book_id && book.isAvailable) {
+            if (book.bookID.equals(book_id) && book.isAvailable) {
                 user.borrowedBooks.add(book);
                 book.isAvailable = false;
                 System.out.println(user.userName + " has checked out " + book.title + ".");
@@ -45,9 +45,9 @@ public class Library {
     }
 
     // A method to return a book.
-    public void returnBook(User user, int book_id){
+    public void returnBook(User user, String book_id){
         for (Book book : user.borrowedBooks){
-            if (book.bookID == book_id && !book.isAvailable){
+            if (book.bookID.equals(book_id) && !book.isAvailable){
                 user.borrowedBooks.remove(book);
                 book.isAvailable = true;
                 System.out.println(user.userName + " has returned " + book.title + ".");
@@ -94,9 +94,9 @@ public class Library {
     }
 
     // A method to display the book details of a specific book.
-    public void displayBookDetails(int book_id){
+    public void displayBookDetails(String book_id){
         for (Book book : books){
-            if (book.bookID == book_id){
+            if (book.bookID.equals(book_id)){
                 System.out.println(book);
                 if (book.isAvailable) {
                     System.out.println("Status: Available");

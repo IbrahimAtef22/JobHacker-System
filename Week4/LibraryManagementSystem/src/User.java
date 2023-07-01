@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class User {
     public String userName;
-    public int userID;
+    public String userID;
     public ArrayList<Book> borrowedBooks;
 
-    public User(String name, int user_id) {
+    public User(String name, String user_id) {
         this.userName = name;
         this.userID = user_id;
         this.borrowedBooks = new ArrayList<>();

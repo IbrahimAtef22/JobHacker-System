@@ -33,7 +33,7 @@ public class Main {
                     System.out.print("Enter Book Author: ");
                     String author = input.nextLine();
                     System.out.print("Enter Book ID: ");
-                    int book_id = input.nextInt();
+                    String book_id = input.nextLine();
                     System.out.print("Enter Book Version: ");
                     int version = input.nextInt();
                     input.nextLine();
@@ -44,11 +44,11 @@ public class Main {
 
                 case 2:
                     System.out.print("\nEnter Book ID to remove: ");
-                    book_id = input.nextInt();
+                    book_id = input.nextLine();
                     input.nextLine();
 
                     for (Book b : library.books){
-                        if (b.bookID == book_id){
+                        if (b.bookID.equals(book_id)){
                             library.removeBook(b);
                             break;
                         }
@@ -59,13 +59,13 @@ public class Main {
                     System.out.print("\nEnter User Name: ");
                     String userName = input.nextLine();
                     System.out.print("Enter User ID: ");
-                    int userId = input.nextInt();
+                    String userId = input.nextLine();
                     input.nextLine();
 
                     User user = new User(userName, userId);
 
                     System.out.print("\nEnter Book ID to check out: ");
-                    book_id = input.nextInt();
+                    book_id = input.nextLine();
                     input.nextLine();
 
                     User returnedUser = library.checkoutBook(user, book_id);
@@ -76,11 +76,11 @@ public class Main {
                     User user2 = null;
 
                     System.out.print("\nEnter user ID: ");
-                    userId = input.nextInt();
+                    userId = input.nextLine();
                     input.nextLine();
 
                     for (User u : library.users) {
-                        if (u.userID == userId) {
+                        if (u.userID.equals(userId)) {
                             user2 = u;
                             break;
                         }
@@ -92,18 +92,18 @@ public class Main {
                     }
 
                     System.out.print("Enter book ID to return: ");
-                    book_id = input.nextInt();
+                    book_id = input.nextLine();
                     input.nextLine();
 
                     library.returnBook(user2, book_id);
                     break;
                 case 5:
                     System.out.print("\nEnter book ID to display details: ");
-                    book_id = input.nextInt();
+                    book_id = input.nextLine();
                     input.nextLine();
 
                     for (Book b : library.books) {
-                        if (b.bookID == book_id) {
+                        if (b.bookID.equals(book_id)) {
                             library.displayBookDetails(book_id);
                             break;
                         }
