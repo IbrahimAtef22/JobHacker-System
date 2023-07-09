@@ -1,33 +1,63 @@
 package Week5.week5tasks.src;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class CountWordsTask2 {
     public static void main(String[] args) {
-        FileReader fr;
-        FileWriter fw;
-        int count = 0;
+        File fileToRead = new File("Week5\\week5tasks\\src\\Lincoln.txt");
+        int numOfWords = countWordsInFile(fileToRead);
+
+        File fileToWrite = new File("Week5\\week5tasks\\src\\CountWordsInLincolnFile.txt");
+        writeNumOfWordsInFile(fileToWrite, numOfWords);
+
+    }
+
+    // write to file a number of words calculated in another file
+    public static void writeNumOfWordsInFile(File fileToWrite, int numOfWords){
+        FileWriter fileWriter = null;
         try {
-            fr = new FileReader("Week5\\week5tasks\\src\\Lincoln.txt");
-            int i;
-            while ((i = fr.read()) != -1){
-                if ((char)i == ' '){
-                    count++;
+            fileWriter = new FileWriter(fileToWrite);
+            fileWriter.write("Num Of Words In Lincoln File = "+numOfWords);
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }finally {
+            try {
+                if (fileWriter != null) {
+                    fileWriter.close();
                 }
+            } catch (IOException e) {
+                System.err.println(e.getMessage());
             }
-
-
-            fw = new FileWriter("Week5\\week5tasks\\src\\Lincoln.txt", true);
-
-            fw.write("Num Of Words = "+count);
-
-            fr.close();
-            fw.close();
-
-        } catch(IOException fe){
-            System.err.println(fe.getMessage());
         }
     }
+
+    // read from file and count number of words in a file
+    public static int countWordsInFile(File fileToRead){
+        String[] excludedChars = {" ", ",", "--"};
+        int wordCount = 0;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(fileToRead))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] words = line.split("\\s+");
+                for (String word : words) {
+                    boolean excluded = false;
+                    for (String excludedChar : excludedChars) {
+                        if (word.equals(excludedChar)) {
+                            excluded = true;
+                            break;
+                        }
+                    }
+                    if (!excluded) {
+                        wordCount++;
+                    }
+                }
+            }
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+
+        return wordCount;
+    }
+
 }

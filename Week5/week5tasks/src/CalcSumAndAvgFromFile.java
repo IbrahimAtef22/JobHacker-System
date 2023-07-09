@@ -24,14 +24,24 @@ public class CalcSumAndAvgFromFile {
         }
     }
 
-    public static FileWriter readFromWebToFile(String url) {
+    // connect to url on the web
+    public static URLConnection getConnectionWithURL(String url){
+        URLConnection urlConnection;
+        try {
+            URL urlObj = new URL(url); // creating an url object
+            urlConnection = urlObj.openConnection(); // creating an urlConnection object
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return urlConnection;
+    }
 
+    // read from url and write to file
+    public static FileWriter readFromWebToFile(String url) {
+        URLConnection urlConnection = getConnectionWithURL(url);
         FileWriter fw = null;
 
         try {
-            URL urlObj = new URL(url); // creating an url object
-            URLConnection urlConnection = urlObj.openConnection(); // creating an urlConnection object
-
             // wrapping the urlConnection in a bufferedReader
             InputStreamReader inputStreamReader = new InputStreamReader(urlConnection.getInputStream());
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
@@ -46,10 +56,8 @@ public class CalcSumAndAvgFromFile {
             fw.flush();
             bufferedReader.close();
 
-
         } catch (IOException fe) {
             System.err.println(fe.getMessage());
-            //return null;
         }
         return fw;
     }
@@ -63,19 +71,18 @@ public class CalcSumAndAvgFromFile {
             System.err.println(e.getMessage());
         }
 
-
         if (scan != null) {
             while (scan.hasNextInt()) {
                 try {
                     int number = scan.nextInt();
                     sum += number;
-                } catch (NumberFormatException | NullPointerException e) {
+                } catch (NumberFormatException e) {
+                    System.err.println(e.getMessage());
+                } catch (NullPointerException e) {
                     System.err.println(e.getMessage());
                 }
             }
         }
-
-
         return sum;
     }
 
@@ -103,9 +110,7 @@ public class CalcSumAndAvgFromFile {
             }
         }
 
-
         average = sum / count;
         return average;
-
     }
 }

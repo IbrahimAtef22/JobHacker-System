@@ -1,6 +1,7 @@
 package Week5.week5tasks.src;
 
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class InputMismatchTask1 {
@@ -12,13 +13,13 @@ public class InputMismatchTask1 {
         boolean isThereException;
 
         do {
-            System.out.print("Enter First Number: ");
-            if (input.hasNextInt()) {
+            try {
+                System.out.println("Enter First Number: ");
                 num1 = input.nextInt();
                 isThereException = false;
 
-            } else {
-                System.out.println("Invalid input. Please enter an integer.");
+            }catch (InputMismatchException ex){
+                System.err.println("Invalid input. Please enter an integer.");
                 input.next();
                 isThereException = true;
             }
@@ -27,13 +28,13 @@ public class InputMismatchTask1 {
 
 
         do {
-            System.out.print("\nEnter Second Number: ");
-            if (input.hasNextInt()) {
+            try{
+                System.out.println("\nEnter Second Number: ");
                 num2 = input.nextInt();
                 isThereException = false;
 
-            } else {
-                System.out.println("Invalid input. Please enter an integer.");
+            }catch (InputMismatchException ex) {
+                System.err.println("Invalid input. Please enter an integer.");
                 input.next();
                 isThereException = true;
             }
