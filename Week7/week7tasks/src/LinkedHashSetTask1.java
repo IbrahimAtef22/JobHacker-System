@@ -23,62 +23,47 @@ public class LinkedHashSetTask1 {
                 // take query input
                 String query = input.nextLine();
 
-                if (query.length() > 1 && query.contains(" ")){
 
-                        String[] elements = query.split(" ");
-                        if(elements.length == 2){
-                            switch (elements[0]){
-                                case "a":
-                                    set.add(Integer.valueOf(elements[1]));
-                                    break;
-                                case "c":
-                                    set.remove(Integer.valueOf(elements[1]));
-                                    break;
-                                case "d":
-                                    if (set.contains(Integer.valueOf(elements[1]))){
-                                        System.out.println("1");
-                                    }else{
-                                        System.out.println("-1");
-                                    }
-                                    break;
-                                default:
-                                    System.out.println("Incorrect query!!!");
-                                    continue;
-                            }
-                        }else {
-                            System.out.println("Incorrect query!!!");
-                            continue;
+                char character = query.charAt(0);
 
+                switch (character){
+                    case 'a':
+                        set.add(Integer.parseInt(query.substring(2)));
+                        break;
+                    case 'b':
+                        // Convert LinkedHashSet to an ArrayList
+                        ArrayList<Integer> list = new ArrayList<>(set);
+
+                        // sort ArrayList
+                        Collections.sort(list);
+
+                        for (Integer item : list) {
+                            System.out.print(item + " ");
                         }
-
-                }else if (query.length() == 1){
-                        switch (query.charAt(0)){
-                            case 'b':
-                                // Convert LinkedHashSet to an ArrayList
-                                ArrayList<Integer> list = new ArrayList<>(set);
-
-                                // sort ArrayList
-                                Collections.sort(list);
-
-                                for (Integer item : list) {
-                                    System.out.print(item + " ");
-                                }
-                                System.out.println();
-                                break;
-                            case 'e':
-                                System.out.println(set.size());
-                                break;
-                            case 'f':
-                                for (Integer item : set) {
-                                    System.out.print(item + " ");
-                                }
-                                System.out.println();
-                                break;
-                            default:
-                                System.out.println("Incorrect query!!!");
-                                continue;
-
+                        System.out.println();
+                        break;
+                    case 'c':
+                        set.remove(Integer.parseInt(query.substring(2)));
+                        break;
+                    case 'd':
+                        if (set.contains(Integer.parseInt(query.substring(2)))){
+                            System.out.println("1");
+                        }else{
+                            System.out.println("-1");
                         }
+                        break;
+                    case 'e':
+                        System.out.println(set.size());
+                        break;
+                    case 'f':
+                        for (Integer item : set) {
+                            System.out.print(item + " ");
+                        }
+                        System.out.println();
+                        break;
+                    default:
+                        System.out.println("Incorrect query!!!");
+                        continue;
                 }
                 j++;
             }
